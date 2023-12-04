@@ -1,0 +1,45 @@
+.users-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.users-page > h1 {
+    color: #000;
+    font-size: 50px;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.user {
+    background-color: #000;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 30px auto;
+    border-radius: 7px;
+    padding: 0 10px;
+}
+.user .user-name ,.user .user-email {
+    color: #ffffff;
+    font-size: 20px;
+
+}
+
+
+/* Responsive */
+@media (max-width:767px) {
+
+.users-page h1 {
+    font-size: 20px;
+    margin: 15px auto;
+   }
+   .user {
+    height: 50px;
+    margin: 10px auto;
+   }
+   .user .user-email,.user .user-name {
+        font-size: 15px;
+   }
+}

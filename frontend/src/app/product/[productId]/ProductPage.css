@@ -1,0 +1,112 @@
+.product-page {
+    width: 95%;
+    margin: 10% auto;
+    height: 64.4vh;
+}
+.product-page .product-details {
+    display: flex;
+    height: max-content;
+}
+.product-page .product-imgs {
+    width: 40%;
+    height: 400px;
+}
+.product-page .product-details .preview-img {
+    max-width: 100%;
+    border-radius: 7px;
+    height: 100%;
+    object-fit: contain;
+}
+ 
+.product-details .product-desc {
+    margin-left: 30px;
+    width: 60%;
+}
+.product-details .product-desc .product-tittle {
+    font-size: 30px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 10px;
+
+}
+.product-details .product-desc .desc {
+    font-size: 15px;
+    color: #000;
+    margin-bottom: 50px;
+    line-height: 1.5;
+    width: 70%;
+    height: auto;
+} 
+.product-details .product-desc .product-price {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.product-details .product-desc .add {
+    background-color: #121212;
+    border: 1px solid #000;
+    color: #fff;
+    text-decoration: none;
+    width: 50%;
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: bold;
+}
+.product-details .product-desc .add:hover {
+    background-color: #fff;
+    color: #000;
+    
+}
+
+
+/* Responsive */
+@media (max-width:767px) {
+    
+.product-page {
+        height: max-content;
+    }
+    .product-details{
+        flex-direction: column;
+    }
+    .product-page .product-imgs {
+        width: 100%;
+        height: auto;
+        display: flex;
+    }
+    .admin > h1 {
+        font-size: 30px;
+    }
+    .admin-card h1 {
+        font-size: 15px;
+    }
+    .product-details {
+        flex-direction: column;
+    }
+    .product-page .product-details .product-imgs {
+        width: 100%;
+        height: auto;
+    }
+    .product-page .product-details .preview-img {
+        width: 100%;
+        height: 200px;
+        margin: auto;
+    }
+    .product-details .product-desc {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .product-details .product-desc .product-tittle {
+        font-size: 20px;
+        width: 100%;
+    }
+    .product-details .product-desc .desc{
+        font-size: 15px;
+        width: 100%;
+    }
+}

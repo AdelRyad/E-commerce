@@ -1,0 +1,25 @@
+.Recomended {
+    margin-top: 50px;
+}
+
+.cards {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Responsive */
+@media (max-width:767px) {
+    .cards h1 {
+        font-size: 20px;
+    }
+
+    .buynow {
+        width: max-content;
+        margin: 0;
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+}

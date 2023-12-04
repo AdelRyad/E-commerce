@@ -1,38 +1,45 @@
 'use client';
-import React, { use, useEffect, useState } from "react";
-import AdminNav from "../components/AdminNav";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Nav from "../../components/Nav";
+import { useStateContext } from "../../components/StateContext";
+import NotAllowed from "../../components/NotAllowed";
+import './Users.css';
 
 
 const Users = () =>
 {
+    const { user } = useStateContext();
     const [users, setUsers] = useState([]);
     useEffect(() =>
     {
-        axios.get('http://localhost:3001/users')
-            .then(res => setUsers(res.data))
-            .catch(err => console.log(err));
+        user == 'admin' ?
+            axios.get('http://localhost:3001/users')
+                .then(res => setUsers(res.data))
+                .catch(err => console.log(err)) : null;
     }, []);
     return (
         <>
-            <AdminNav />
-            <div className="users-page">
-                <h1>Users</h1>
-                <div className="-all-users">
-                    {users.map(user =>
-                    {
-                        if (user.role == 'user')
+            {user == 'admin' ? <>
+                <Nav />
+                <div className="users-page">
+                    <h1>Users</h1>
+                    <div className="-all-users">
+                        {users.map(user =>
                         {
-                            return <div key={user._id} className="user">
-                                <p className="user-name">{user.username}</p>
-                                <p className="user-email">{user.email}</p>
-                            </div>;
-                        }
+                            if (user.role == 'user')
+                            {
+                                return <div key={user._id} className="user">
+                                    <p className="user-name">{user.username}</p>
+                                    <p className="user-email">{user.email}</p>
+                                </div>;
+                            }
 
-                    })}
+                        })}
 
-                </div>
-            </div>
+                    </div>
+                </div></> : <NotAllowed />}
+
         </>
 
     );

@@ -1,0 +1,52 @@
+.admin {
+    width: 90%;
+    display: flex;
+    height: calc(100vh - 131px);
+    flex-wrap: wrap;
+    margin: 0 auto;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.admin>h1 {
+    width: 100%;
+    color: #000;
+    font-size: 50px;
+}
+
+.admin-card {
+    width: 30%;
+    height: 30%;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin-top: 3%;
+    transition: 0.7s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.admin-card:hover {
+    transform: scale(1.1);
+    background-color: #fff;
+
+}
+
+.admin-card:hover.admin-card h1 {
+    color: #000;
+}
+
+.admin-card h1 {
+    color: #000;
+}
+
+
+/* Responsive */
+@media (max-width:767px) {
+    .admin-card h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+}

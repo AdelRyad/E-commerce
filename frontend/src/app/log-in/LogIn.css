@@ -1,0 +1,144 @@
+.log {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    width: 50%;
+    background-color: rgb(12, 12, 12);
+    text-align: center;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.form .error {
+    color: rgb(255, 255, 255);
+}
+
+.form h1 {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.form .inp {
+    display: flex;
+    flex-direction: column;
+}
+
+.email,
+.password {
+    background-color: #eee;
+    border: none;
+    padding: 15px;
+    color: #121212;
+    border-radius: 6px;
+    width: 60%;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.email:focus,
+.password:focus {
+    outline: none;
+}
+
+.password::placeholder,
+.email::placeholder {
+    color: #646464bd;
+}
+
+.submit {
+    width: 25%;
+    margin: 20px auto;
+    padding: 10px 5px;
+    font-size: 20px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 550;
+    background-color: #fff;
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
+}
+.submit:hover {
+    background-color: #e7e7e7;
+}
+
+.forget {
+    text-decoration: none;
+    color: #ffffff;
+    margin: auto;
+    text-align: end;
+    width: 60%;
+}
+
+.p {
+    color: #ffffff;
+    position: relative;
+    margin-top: 20px;
+}
+
+.p::before {
+    content: '';
+    width: 100px;
+    height: 1px;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-110%, 10px);
+
+}
+
+.p::after {
+    content: '';
+    width: 100px;
+    height: 1px;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(10%, 10px);
+}
+
+
+
+/* Responsive */
+@media (max-width:767px) {
+
+    .form {
+        width: 90%;
+    }
+
+    .log .form .inp input {
+        width: 80%;
+        font-size: 13px;
+    }
+
+    .log .form a {
+        font-size: 13px;
+        width: 80%;
+        margin: 5px auto;
+    }
+
+    .log .form a.submit {
+        width: 50%;
+        font-weight: 550;
+        margin: 10px auto;
+    }
+
+    .log .form button.submit {
+        width: 50%;
+        font-size: 13px;
+        margin: 10px auto;
+    }
+
+    .log .form .p {
+        margin: 10px 0;
+    }
+}

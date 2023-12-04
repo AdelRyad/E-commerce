@@ -1,7 +1,7 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
-import '../components/all.css';
+import './LogIn.css';
 import axios from 'axios';
 
 const LogIn = () =>
@@ -14,11 +14,12 @@ const LogIn = () =>
     {
         if (email.trim() != '' && password.trim() != '')
         {
-            axios.post("http://localhost:3001/user", { "email": email, "password": password })
+            axios.post("http://localhost:3001/user", { "email": email, "password": password }, { withCredentials: true })
                 .then(res =>
                 {
-                    res.data == 'user' ? location.pathname = '/' :
-                        res.data == 'admin' ? location.pathname = '/admin' :
+                    sessionStorage.setItem('jwt', res.data[1]);
+                    res.data[0] == 'user' ? location.pathname = '/' :
+                        res.data[0] == 'admin' ? location.pathname = '/admin' :
                             setError(res.data);
                 })
                 .catch(err => console.log(err));

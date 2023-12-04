@@ -1,0 +1,106 @@
+.card {
+    min-width: 310px;
+    max-width: 310px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border: 1px solid #00000048;
+}
+.btns {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+
+}
+.ima {
+    width: 100%;
+    object-fit: contain;
+    height: 150px;
+    border-radius: 10px 10px 0 0;
+    margin: 10px 0;
+}
+
+.card button, .card a{
+    
+    border-radius: 6px;
+    padding: 10px 0;
+    cursor: pointer;
+    font-size: 17px;
+    text-align: center;
+
+}
+.card .buy { 
+    color: #ffffff;
+    text-decoration: none;
+    width: max-content;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0;
+}
+.card svg {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+
+}
+.cls-1 {
+    fill: rgb(255, 255, 255);
+}
+
+.card .add {
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.text {
+    display: flex;
+    color: #ffffff;
+    background-color: #161616;
+    width: 100%;
+    height: 120px;
+    border-radius: 25px 25px 0 0;
+    flex-wrap: wrap;
+
+}
+.text .title {
+    height: 50px;
+    font-size: 15px;
+    margin:10px;
+    width: 100%;
+}
+
+.price {
+    font-weight: bold;
+    color: #ffffff;
+    width: max-content;
+    margin-left: 10px;
+    margin: 0;
+}
+   
+/* Responsive */
+@media (max-width:767px) {
+.card {
+        min-width: 200px;
+    }
+    .text .title {
+        font-size: 13px;
+    }
+    .btns p, .btns .buy{
+        font-size: 13px;
+    }
+    .btns svg {
+        width: 20px;
+        height: 20px;
+    }    
+    .btns .add {
+        margin-bottom: 0;
+        padding: 3px;
+    }
+}

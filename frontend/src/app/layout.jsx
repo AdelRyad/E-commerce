@@ -1,6 +1,6 @@
 import './globals.css';
 import { Inter } from 'next/font/google';
-import { StateContext } from './components/StateContext';
+import { StateContext } from '../components/StateContext';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {

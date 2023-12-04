@@ -1,0 +1,85 @@
+.Top {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.txt {
+    width: 40%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto ;
+    height: fit-content;
+
+}
+
+.Top h1 {
+    color: #000000;
+    font-size: 30px;
+}
+.Top p {
+    font-size: 15px;
+    color: #000000;
+}
+.img {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    
+    
+
+}
+.img img{
+   width: 100%;
+   height: auto;
+   border-radius: 10px;
+   
+   
+   
+}
+.buynow {
+    background-color: #000;
+    color: #fff;
+    width: 30%;
+    padding: 15px 10px;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+/* Responsive */
+@media (max-width:767px) {
+    .Top {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        height: auto;
+        width: 95%;
+        margin: auto;
+    }
+    .Top .img {
+        margin-top: 30px;
+        width: 100%;
+        height: auto;
+    }
+    .Top .txt {
+        width: 90%;
+        margin-top: 30px;
+    }
+    .Top .txt h1{
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+    .Top .txt p {
+        font-size: 15px;
+    }
+}
