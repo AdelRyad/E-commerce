@@ -31,7 +31,7 @@ const EditProduct = () =>
 
     const editPro = () =>
     {
-        axios.put(`http://localhost:3001${location.pathname}`, { 'tittle': tittle, "price": price, "amount": amount, "category": category, "desc": desc })
+        axios.put(`${process.env.SERVER}${location.pathname}`, { 'tittle': tittle, "price": price, "amount": amount, "category": category, "desc": desc })
             .then(res => res.data == 'edited' ? location.pathname = '/all-products' : null)
             .catch(err => console.log(err));
     };

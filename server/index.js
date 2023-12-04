@@ -15,7 +15,6 @@ app.use(cors({
     origin: 'http://localhost:3000',
     credentials: true,
 }));
-app.use(cookieParser());
 
 // create token
 const createToken = (id) =>
@@ -242,7 +241,7 @@ app.get('/orders', (req, res) =>
 
 
 mongoose.connect(process.env.DATA_BASE);
-app.listen(3001, () =>
+app.listen(process.env.PORT, () =>
 {
     console.log('server is running');
 });

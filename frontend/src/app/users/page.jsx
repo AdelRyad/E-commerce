@@ -14,7 +14,7 @@ const Users = () =>
     useEffect(() =>
     {
         user == 'admin' ?
-            axios.get('http://localhost:3001/users')
+            axios.get(`${process.env.SERVER}/users`)
                 .then(res => setUsers(res.data))
                 .catch(err => console.log(err)) : null;
     }, []);

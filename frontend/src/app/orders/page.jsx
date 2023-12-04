@@ -14,7 +14,7 @@ const OrdersPage = () =>
 
     useEffect(() =>
     {
-        axios.get('http://localhost:3001/orders')
+        axios.get(`${process.env.SERVER}/orders`)
             .then(res => SetOrders(res.data));
     }, []);
     return (
