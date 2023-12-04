@@ -67,7 +67,7 @@ export const StateContext = ({ children }) =>
       setTimeout(() =>
       {
         getProducts();
-      }, 500);
+      }, 60000);
     }
 
   }, [products]);

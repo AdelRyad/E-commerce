@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const UsereModel = require('./models/User');
 const productModel = require('./models/Product');
-const { redirect } = require('next/dist/server/api-utils');
+
 const app = express();
 app.use(express.json());
 app.use(cors());
@@ -149,8 +149,8 @@ app.get('/users', async (req, res) =>{
 
 
 
-mongoose.connect('mongodb://127.0.0.1:27017/e-commerce');
-app.listen(3001, () =>
+mongoose.connect("mongodb+srv://adelryad:0100449469@cluster0.y6q3fzo.mongodb.net/e-commerce");
+app.listen( 3001, () =>
 {
     console.log('server is running');
 });

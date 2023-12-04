@@ -3,8 +3,9 @@ import './page.module.css';
 import Nav from './components/Nav';
 import Top from './components/Top';
 import Recomended from './components/Recomended';
-import Footer from './components/footer';
+
 import Cart from './components/Cart';
+import Footer from './components/Footer';
 
 function Home()
 {
