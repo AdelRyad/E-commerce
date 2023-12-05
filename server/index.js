@@ -20,7 +20,7 @@ const createToken = (id) =>
 {
     return jwt.sign({ id }, 'e-commerce web template');
 };
-app.get('/', (req, res) => {
+app.get('', (req, res) => {
   res.json({ message: 'Hello from Vercel!' });
 });
 // create new user
