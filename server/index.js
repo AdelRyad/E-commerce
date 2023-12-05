@@ -1,15 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const UsereModel = require('../models/User');
-const productModel = require('../models/Product');
+const UsereModel = require('./models/User');
+const productModel = require('./models/Product');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const orderModel = require('../models/Order');
+const orderModel = require('./models/Order');
 
 require('dotenv').config();
-
-export const app = express();
+const app = express();
 app.use(express.json());
 app.use(cors({
     origin: 'http://localhost:3000',
@@ -21,7 +20,9 @@ const createToken = (id) =>
 {
     return jwt.sign({ id }, 'e-commerce web template');
 };
-app.get('/',(req,res)=> {res.json('Hello')})
+app.get('/api/hello', (req, res) => {
+  res.json({ message: 'Hello from Vercel!' });
+});
 // create new user
 
 app.post('/new-user', async (req, res) =>
