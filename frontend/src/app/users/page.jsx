@@ -17,7 +17,7 @@ const Users = () =>
             axios.get(`${process.env.SERVER}/users`)
                 .then(res => setUsers(res.data))
                 .catch(err => console.log(err)) : null;
-    }, []);
+    }, [user]);
     return (
         <>
             {user == 'admin' ? <>
