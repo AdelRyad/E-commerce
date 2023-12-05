@@ -15,7 +15,7 @@ const Products = ({ category }) =>
                 <div className="cat-cards" >
                     {products.map(product => product.category == category ?
                         <div key={product._id} className="card">
-                            <Image src={product.image} width={1000} height={1000} quality={100} className="ima" />
+                            <Image key={product._id} src={product.image} width={1000} height={1000} quality={100} className="ima" alt='' />
                             <div className="admin-text">
                                 <p className="title">tittle:  {product.title}</p>
                                 <p className="category">category:  {product.category}</p>

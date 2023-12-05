@@ -18,7 +18,7 @@ export const Top = async () =>
           <Link href={`/product/${product._id}`} className='buynow'>Buy Now</Link>
         </div>
         <div className="img">
-          <Image alt='asd' src={product.image} width={1000} height={1000} quality={100} />
+          <Image key={product._id} alt='asd' src={product.image} width={1000} height={1000} quality={100} />
         </div>
       </div>
     </>

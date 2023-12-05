@@ -25,7 +25,7 @@ const OrdersPage = () =>
                     <div className="orders-page">
                         <h1>Orders</h1>
                         <div className="orders">
-                            {orders.map(order => <Orders order={order} />
+                            {orders.map(order => <Orders order={order} key={order.name} />
 
                             )}
                         </div>

@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import { useStateContext } from './StateContext';
 import './styles/CartProduct.css';
 
@@ -8,7 +9,7 @@ const CartProduct = ({ id, title, price, image, qty }) =>
     const { handleRemoveCart, handleQty, cartProduct } = useStateContext();
     return (
         <div className='cart-pro'>
-            <img src={image} className='cart-img' />
+            <Image key={id} src={image} className='cart-img' alt='' width={100} height={100} />
             <p className="pro-tittle">{title}</p>
             <p className='pro-price'>{price}$</p>
             <div className='pro-count'>

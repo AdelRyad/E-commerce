@@ -92,7 +92,7 @@ const Checkout = () =>
                 <div className="bought-products" >
                     {OrderItems.length > 0 ? OrderItems.map(product =>
                         <div className="checkout-product" key={product._id}>
-                            <Image src={product.image} width={100} height={100} alt={product.title} />
+                            <Image key={product._id} src={product.image} width={100} height={100} alt={product.title} />
                             <p>{product.title}</p>
                             <p>{product.qty}</p>
                             <p>{product.price}$</p>

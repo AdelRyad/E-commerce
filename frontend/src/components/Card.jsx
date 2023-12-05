@@ -11,7 +11,7 @@ const Card = ({ tittle, price, _id, img }) =>
 
     return (
         <div className='card' >
-            <Image alt='' src={img} width={1000} height={1000} quality={100} className="ima" />
+            <Image key={_id} alt='' src={img} width={1000} height={1000} quality={100} className="ima" />
             <div className="text">
                 <p className="title">{tittle}</p>
                 <div className="btns">

@@ -15,8 +15,8 @@ const Orders = ({ order }) =>
                 <button className='btn' onClick={() => SetShowpProducts(!showpProducts)}>&#10148;</button>
             </div>
             <div className={`products ${showpProducts ? 'show-products' : ''}`}>
-                {order.products.map(product => <div className='product'>
-                    <Image src={product.image} width={100} height={100} />
+                {order.products.map(product => <div key={product._id} className='product'>
+                    <Image key={product._id} src={product.image} width={100} height={100} alt='' />
                     <p className="product-title">{product.title}</p>
                     <p className="product-qty">qty: {product.qty}</p>
                     <p className="product-price">{product.price}$</p>

@@ -29,7 +29,7 @@ const Product = () =>
             <div className='product-page'>
                 <div className="product-details">
                     <div className="product-imgs">
-                        <Image src={product.image} width={1000} height={1000} quality={100} className='preview-img' />
+                        <Image src={product.image} width={1000} height={1000} quality={100} className='preview-img' alt='' />
                     </div>
                     <div className="product-desc">
                         <p className="product-tittle">{product.title}</p>
