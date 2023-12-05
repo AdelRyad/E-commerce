@@ -21,7 +21,7 @@ const createToken = (id) =>
 {
     return jwt.sign({ id }, 'e-commerce web template');
 };
-
+app.get('/',(req,res)=> {res.json('Hello')})
 // create new user
 
 app.post('/new-user', async (req, res) =>
