@@ -14,7 +14,7 @@ export const StateContext = ({ children }) =>
 
   const getProducts = () =>
   {
-    axios.get(`${process.env.SERVER}/products`).then(res => setPorducts(res.data));
+    axios.get(`http://localhost:3001/products`).then(res => setPorducts(res.data));
   };
   useEffect(() =>
   {
@@ -111,7 +111,7 @@ export const StateContext = ({ children }) =>
   // delet product from store 
   const deleteProduct = (Id) =>
   {
-    axios.delete(`${process.env.SERVER}/delete/${Id}`)
+    axios.delete(`http://localhost:3001/delete/${Id}`)
       .then(res => res.data == 'deleted' ? getProducts() : null)
       .catch(err => console.log(err));
   };
@@ -124,7 +124,7 @@ export const StateContext = ({ children }) =>
   const checkUser = () =>
   {
     const token = sessionStorage.getItem('jwt');
-    axios.post(`${process.env.SERVER}/check-user`, { 'token': token })
+    axios.post(`http://localhost:3001/check-user`, { 'token': token })
       .then(res => setUser(res.data))
       .catch(err => console.log(err));
 

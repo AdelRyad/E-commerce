@@ -6,7 +6,7 @@ import axios from 'axios';
 export const Top = async () =>
 {
 
-  const fetch = await axios.get(`${process.env.SERVER}/product/65204a3e286f54714c6ddf65`);
+  const fetch = await axios.get(`http://localhost:3001/product/65204a3e286f54714c6ddf65`);
   const product = fetch.data;
 
   return (
