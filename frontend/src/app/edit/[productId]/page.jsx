@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import AdminNav from '@/app/components/AdminNav';
 import axios from 'axios';
 import NotAllowed from '@/components/NotAllowed';
 const EditProduct = () =>
