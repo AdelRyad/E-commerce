@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import NotAllowed from '@/components/NotAllowed';
+import Nav from '@/components/Nav';
 const EditProduct = () =>
 {
     const [tittle, setTittle] = useState();
@@ -42,7 +43,7 @@ const EditProduct = () =>
     return (
         <>
             {user == 'admin' ? <>
-                <AdminNav />
+                <Nav />
                 <div className='add-product'>
                     <div className="product">
                         <h1>Add New Product</h1>
