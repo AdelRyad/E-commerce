@@ -33,7 +33,7 @@ const Cart = () =>
               }
             </div>
             <div className='cart-check'>
-              <h3>Total: <span>{totalPrice.toFixed(2)}</span>$</h3>
+              <p className='total'>Total: <span>{totalPrice.toFixed(2)}</span>$</p>
               {cartProduct.length > 0 ? <Link href={"/checkout"} onClick={checkout}>Check Out</Link> : null}
             </div>
           </div>
