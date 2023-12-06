@@ -44,58 +44,7 @@
     color: #000;
     text-align: center;
 }
-.cart-pro {
-    background-color: #000;
-    margin: 10px 0;
-    display: flex;
-    align-items: center;
-    border-radius: 6px;
-    justify-content: space-between
-}
-.cart-pro p {
-    color: #fff;
-}
-.pro-tittle {
-    font-size: 12px;
-    width: 50%;
-    margin-left: 10px;
-}
 
-.pro-price {
-    width: 100px;
-    text-align: center;
-    
-}
-.cart-pro .cart-img {
-    height: 60px;
-    width: 60px;
-    border-radius: 6px;
-}
-.cart-pro .pro-count button {
-    height: 25px;
-    width: 30px;
-    background-color: #fff;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 6px;
-    border: none;
-    text-align: center;
-    
-}
-
-.cart-pro .pro-count {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 10%; 
-}
-.cart-pro .pro-count span {
-    text-align: center;
-    margin: 0 5px;
-    outline: none;
-    color: #fff;
-}
  .cart .cart-check {
     display: flex;
     justify-content: space-between;
@@ -110,14 +59,7 @@
     padding: 10px;
     border-radius: 6px;
  }
- .delte-cart {
-   cursor: pointer;
-   margin: 0 10px 0 20px;
- }
- .delte-cart svg {
-    fill: #fff;
-    width: 20px;
- }
+ 
 
  /* Responsive */
  @media (max-width:767px) {
@@ -132,43 +74,5 @@
         margin: 0;
         padding: 0;
     }
-    .cart-pro {
-        width: 100%;
-        margin: 10px 0; 
-    }
-    .pro-tittle {
-        width: 30%;
-        margin: 0 0 0 5px;
-    } 
-    .delte-cart {
-        width: 15px;
-        margin-left: 10px;
-        margin-right: 5px;
-    }
-    .delte-cart svg{
-       width: 100%;
-    }
-    .cart-pro .pro-count {
-        margin: 0 10px;
-
-    }
-    .cart-pro .pro-count button{
-        width: 20px;
-        height: 20px;
-    }
-    .cart-pro .pro-count span{
-        font-size: 15px;
-        padding: 0;
-    }
-    .pro-price {
-        width: max-content;
-        margin-right: 10px;
-        font-size: 12px;
-    }
-    .pro-tittle {
-        width: 35%;
-    }
-    .delte-cart {
-        margin-left: 10px;
-    }
+   
 }
