@@ -85,9 +85,12 @@
 
     .cart-products {
         height: 75%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
-    .cart-products,
+
     .cart-cont {
         width: 100%;
         margin: 0;
