@@ -14,7 +14,7 @@ const Product = () =>
 
     useEffect(() =>
     {
-        axios.get(`${process.env.SERVER}${location.pathname}`)
+        axios.get(`${process.env.NEXT_PUBLIC_SERVER}${location.pathname}`)
             .then(res => setProduct(res.data))
             .catch(err => console.log(err));
     }, []);

@@ -19,7 +19,7 @@ const AddProduct = () =>
 
     function handleAdd()
     {
-        user == 'admin' ? axios.post(`${process.env.SERVER}/new-product`, { "tittle": tittle, "desc": desc, "amount": amount, "price": price, "category": category })
+        user == 'admin' ? axios.post(`${process.env.NEXT_PUBLIC_SERVER}/new-product`, { "tittle": tittle, "desc": desc, "amount": amount, "price": price, "category": category })
             .then(res =>
             {
                 res.data == 'created' ? location.pathname = '/all-products' : null;

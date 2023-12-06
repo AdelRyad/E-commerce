@@ -25,7 +25,7 @@ const SignUP = () =>
 
         if (username.trim() !== '' && eCheck && pCheck && password == confirmPassword && nCheck)
         {
-            axios.post(`${process.env.SERVER}/new-user`, { "username": username, "email": email, "password": password, "role": "user" })
+            axios.post(`${process.env.NEXT_PUBLIC_SERVER}/new-user`, { "username": username, "email": email, "password": password, "role": "user" })
                 .then(result =>
                 {
                     result.data != 'created' ? setError(result.data) : location.pathname = '/log-in';

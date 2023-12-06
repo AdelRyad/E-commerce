@@ -82,13 +82,10 @@ const Nav = () =>
                             {searchActive == true ?
                                 <div className="search-items">
                                     {searchItems.map(item =>
-                                        <div className='search-item' key={item._id} id={item._id} onClick={(e) =>
-                                        {
-                                            location.pathname = `/product/${e.target.id}`;
-                                        }}>
+                                        <Link className='search-item' key={item._id} id={item._id} href={item._id}>
                                             <Image src={item.image} width={1000} height={1000} alt='' id={item._id} quality={100} />
                                             <p id={item._id}>{item.title}</p>
-                                        </div>
+                                        </Link>
                                     )}
                                 </div>
                                 : null}

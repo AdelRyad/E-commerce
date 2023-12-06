@@ -50,7 +50,7 @@ const Checkout = () =>
     {
         if (nameValdiation.test(name.trim()) && emailValdiation.test(email.trim()) && adress.trim() != '' && phoneValidation.test(phone.trim()))
         {
-            axios.post(`${process.env.SERVER}/checkout`, { "name": name, "email": email, "adress": adress, "phone": phone, 'feedback': feedback, 'products': OrderItems, 'total': total })
+            axios.post(`${process.env.NEXT_PUBLIC_SERVER}/checkout`, { "name": name, "email": email, "adress": adress, "phone": phone, 'feedback': feedback, 'products': OrderItems, 'total': total })
                 .then(result =>
                 {
                     result.data !== 'ordered' ? setOrder(false) : setOrder(true);

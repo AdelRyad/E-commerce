@@ -14,7 +14,7 @@ const Admins = () =>
 
     useEffect(() =>
     {
-        axios.get(`${process.env.SERVER}/admins`)
+        axios.get(`${process.env.NEXT_PUBLIC_SERVER}/admins`)
             .then(res => setUsers(res.data))
             .catch(err => console.log(err));
     }, []);

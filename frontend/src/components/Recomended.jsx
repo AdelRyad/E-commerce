@@ -8,7 +8,7 @@ import './styles/Recomended.css';
 const Recomended = async () =>
 {
   const categories = [];
-  const products = await axios.get(`${process.env.SERVER}/products`);
+  const products = await axios.get(`${process.env.NEXT_PUBLIC_SERVER}/products`);
   products.data.map(pro => categories.includes(pro.category) ? null : categories.push(pro.category));
 
   return (

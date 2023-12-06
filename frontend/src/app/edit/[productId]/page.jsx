@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import NotAllowed from '@/components/NotAllowed';
 import Nav from '@/components/Nav';
+import '../../add-product/AddProduct.css';
+import { useStateContext } from '@/components/StateContext';
 const EditProduct = () =>
 {
     const [tittle, setTittle] = useState();
@@ -17,7 +19,7 @@ const EditProduct = () =>
     {
 
         user == 'admin' ?
-            axios.get(`http://localhost:3001${location.pathname}`)
+            axios.get(`${process.env.NEXT_PUBLIC_SERVER}${location.pathname}`)
                 .then(res =>
                 {
                     setTittle(res.data.title);
@@ -31,7 +33,7 @@ const EditProduct = () =>
 
     const editPro = () =>
     {
-        axios.put(`${process.env.SERVER}${location.pathname}`, { 'tittle': tittle, "price": price, "amount": amount, "category": category, "desc": desc })
+        axios.put(`${process.env.NEXT_PUBLIC_SERVER}${location.pathname}`, { 'tittle': tittle, "price": price, "amount": amount, "category": category, "desc": desc })
             .then(res => res.data == 'edited' ? location.pathname = '/all-products' : null)
             .catch(err => console.log(err));
     };

@@ -14,7 +14,7 @@ const LogIn = () =>
     {
         if (email.trim() != '' && password.trim() != '')
         {
-            axios.post(`${process.env.SERVER}/user`, { "email": email, "password": password }, { withCredentials: true })
+            axios.post(`${process.env.NEXT_PUBLIC_SERVER}/user`, { "email": email, "password": password }, { withCredentials: true })
                 .then(res =>
                 {
                     sessionStorage.setItem('jwt', res.data[1]);
