@@ -204,7 +204,14 @@
         height: 70px;
         word-wrap: break-word;
     }
-    .btns .add,.btns .delete{
+
+    .btns .add,
+    .btns .delete {
         font-size: 14px;
+    }
+
+    .scroll-left,
+    .scroll-right {
+        display: none;
     }
 }
