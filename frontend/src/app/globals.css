@@ -27,5 +27,9 @@ hr {
 ::-webkit-scrollbar {
     height: 10px;
 }
-/* mobile */
 
+@media (max-width:767px){
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}

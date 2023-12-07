@@ -38,3 +38,8 @@
     font-weight: bold;
     font-size: 30px;
 }
+@media (max-width: 767px){
+    .scroll-left,.scroll-right{
+        display: none;
+    }
+}
