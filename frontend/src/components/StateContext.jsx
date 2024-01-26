@@ -93,7 +93,7 @@ export const StateContext = ({ children }) =>
   };
 
 
-  // delet product from cart
+  // delete product from cart
 
   const handleRemoveCart = (id) =>
   {
@@ -108,7 +108,7 @@ export const StateContext = ({ children }) =>
   };
 
 
-  // delet product from store 
+  // delete product from store 
   const deleteProduct = (Id) =>
   {
     axios.delete(`${process.env.SERVER}/delete/${Id}`)
@@ -118,7 +118,7 @@ export const StateContext = ({ children }) =>
 
 
 
-  // protecting rouets
+  // protecting routs
 
   const [user, setUser] = useState();
   const checkUser = () =>
