@@ -10,18 +10,18 @@ const orderModel = require( './models/Order' );
 require( 'dotenv' ).config();
 const app = express();
 app.use( express.json() );
-const allowedOrigins = [ 'https://e-commerce-six-omega-35.vercel.app' ];
+const allowedOrigins = [ 'https://e-commerce-six-omega-35.vercel.app', 'http://localhost:3000' ];
 
 app.use( cors( {
     origin: function ( origin, callback )
     {
         // Check if the origin is in the allowedOrigins array or if it's undefined (allowing same-origin requests)
-        if ( allowedOrigins.includes( origin ) )
+        if ( !origin || allowedOrigins.includes( origin ) )
         {
             callback( null, true );
         } else
         {
-            callback( new Error( 'Not allowed by CORS' ) );
+            callback( new Error( 'Not allowed ' ) );
         }
     },
     credentials: true,
